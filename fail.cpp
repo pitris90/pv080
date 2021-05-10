@@ -4,8 +4,10 @@ int memcheckFailDemo(int* arrayStack, unsigned int arrayStackLen,
 	int* arrayHeap, unsigned int arrayHeapLen) {
   int Stack[5];
 
-  Static[100] = 0; 
-  Stack[100] = 0; 
+  if (Static.size() >= 101)
+    Static[100] = 0; 
+  if (Stack.size() >= 101)
+    Stack[100] = 0; 
 
   for (int i = 0; i <= 5; i++) Stack [i] = 0;
 
